@@ -1,0 +1,126 @@
+/* === Main container === */
+.recipe-directions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #fdf4e3; /* light beige background */
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  /* === Step layout === */
+  .recipe-step {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+  }
+  
+  .recipe-step.hidden {
+    display: none;
+  }
+  
+  /* === Step image === */
+  .step-image img {
+    width: 180px;
+    height: 130px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  /* === Separator line === */
+  .step-divider {
+    width: 2px;
+    height: 80px;
+    background-color: #4b3b2f; /* thin dark brown line */
+    flex-shrink: 0;
+    border-radius: 2px;
+  }
+  
+  /* === Text section === */
+  .step-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    color: #3b2f1a;
+    font-family: 'Arial', sans-serif;
+    max-width: 700px;
+  }
+  
+  .step-title {
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .step-title strong {
+    font-weight: bold;
+    color: #3b2f1a;
+    margin-right: 5px;
+  }
+  
+  .step-time {
+    font-size: 14px;
+    color: #5a4631;
+    margin: 5px 0 0 0;
+  }
+  
+  /* === Read More button === */
+  .read-more-btn {
+    background-color: #d9001d;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 20px auto 0;
+    display: block;
+    transition: background 0.3s ease;
+  }
+  
+  .read-more-btn:hover {
+    background-color: #b30017;
+  }
+  
+  /* === Fade-in animation === */
+  .fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* === Mobile view === */
+  @media (max-width: 768px) {
+    .recipe-step {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 15px;
+    }
+  
+    .step-divider {
+      display: none;
+    }
+  
+    .step-image img {
+      width: 100%;
+      height: auto;
+    }
+  
+    .step-content {
+      align-items: center;
+    }
+  
+    .step-title {
+      font-size: 16px;
+    }
+  
+    .step-time {
+      font-size: 14px;
+    }
+  }
+  
